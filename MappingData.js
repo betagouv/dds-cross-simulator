@@ -21,3 +21,22 @@ mappings = {
 		}
 	}
 }
+
+function getNoActivityTypeFor(requester) {
+	if (requester.ressources.indexOf('bourseEnseignementSup') > -1)
+		return 'ScholarshipStudent';
+	if (requester.situationsPro.indexOf('etudiant') > -1)
+		return 'Student';
+	if (requester.situationsPro.indexOf('retraite') > -1)
+		return 'Retired';
+	if (requester.situationsPro.indexOf('demandeur_emploi') > -1)
+		return 'Workless';
+
+	// Never used:
+	// 'StoppedWorkForSickness',
+	// 'LongSickness',
+	// 'Impaired',
+	// 'Jailed',
+
+	return 'Other';
+}
