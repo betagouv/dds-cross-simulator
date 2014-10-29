@@ -36,4 +36,7 @@ scenario: [
 
 	NoActivityWidget['select' + getNoActivityTypeFor(requester)](),
 	ControlsWidget.continue(),
+
+	ALWidget['select' + (requester.ressources.indexOf('allocationLogement') > -1 ? '' : 'No') + 'AL'](),
+	ControlsWidget.continue(),
 ]

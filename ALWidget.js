@@ -1,0 +1,2 @@
+selectALRadio: '#Choixoui',
+selectNoALRadio: '#Choixnon',
