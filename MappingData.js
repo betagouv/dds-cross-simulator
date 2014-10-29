@@ -16,7 +16,8 @@ mappings = {
 
 	synonyms: {
 		activity: {
-			none: [ 'sans_activite', 'etudiant', 'retraite', 'demandeur_emploi' ]
+			any:	[ 'salarie', 'auto_entrepreneur', 'apprenti', 'travailleur_saisonnier', 'stagiaire', 'independant', 'gerant_salarie' ],
+			none:	[ 'sans_activite', 'etudiant', 'retraite', 'demandeur_emploi' ]
 		}
 	}
 }
