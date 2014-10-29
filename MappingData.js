@@ -12,5 +12,11 @@ mappings = {
 			nonmeuble: 'WithoutFurniture',
 			meublehotel: 'WithFurniture'
 		}
+	},
+
+	synonyms: {
+		activity: {
+			none: [ 'sans_activite', 'etudiant', 'retraite', 'demandeur_emploi' ]
+		}
 	}
 }
