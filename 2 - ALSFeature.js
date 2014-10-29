@@ -11,7 +11,7 @@ scenario: [
 	RenterWidget['select' + (
 		entry.logement.colocation
 		? 'MultiplePeople'
-		: entry.individus.some(function(el) { el.role == 'concubin' })
+		: partner
 		? 'Partner'
 		: 'Alone')
 	](),
@@ -19,5 +19,14 @@ scenario: [
 	ControlsWidget.continue(),
 
 	RentWidget.setField(entry.logement.loyer),
+	ControlsWidget.continue(),
+
+	FamilySituationWidget['select' + (partner ? 'HasPartner': 'Alone')](),
+	FamilySituationWidget.setBirthDateField(formatBirthDate(requester.dateDeNaissance)),
+	partner
+	? FamilySituationWidget.setPartnerBirthDateField(formatBirthDate(partner.dateDeNaissance))
+	: FamilySituationWidget['selectIs' + (requester.enceinte ? '' : 'Not') + 'Pregnant'](),
+	FamilySituationWidget.setChildrenCountField(children.length),
+	FamilySituationWidget.setParentsCountField(caredFor.length),
 	ControlsWidget.continue(),
 ]
