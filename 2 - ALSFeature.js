@@ -16,6 +16,8 @@ scenario: [
 		: 'Alone')
 	](),
 	RenterWidget['select' + mappings.rent.locationType[entry.logement.locationType]](),
+	ControlsWidget.continue(),
 
+	RentWidget.setField(entry.logement.loyer),
 	ControlsWidget.continue(),
 ]
