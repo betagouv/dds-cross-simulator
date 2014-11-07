@@ -1,7 +1,7 @@
 DDS cross-simulator
 ===================
 
-Use the test acceptance format from the [DDS](https://github.com/sgmap/dds) multi-simulator to use simulators from other administrations.
+Use the test acceptance format from the [mes-aides](https://github.com/sgmap/mes-aides-ui) multi-simulator to use simulators from other administrations.
 
 Status
 ------
